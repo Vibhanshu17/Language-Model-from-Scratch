@@ -1,0 +1,17 @@
+	
+Transformer based language model
+character level language model
+
+Data set: Tiny Shakespeare	(concatenation of all of shakespeare's work)
+
+# TOKENIZERS
+#sub word encoding
+GOOGLE: 	SentencePiece	(google/sentencepiece on github)
+
+#byte pair encoding
+OPENAI:		tiktoken	(openai/tiktoken on github)
+
+	# documentation: tiktoken/core.py
+	import tiktoken
+	enc = tiktoken.get_encoding('gpt2')
+	assert enc.decode(enc.encode('Hello World!')) == 'Hello World!'
